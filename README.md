@@ -1,1 +1,1 @@
-# my-ahk
+# AutoHotkey Accela Tools &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/pgming-life/my-ahk/blob/main/LICENSE)

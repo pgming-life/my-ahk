@@ -754,7 +754,7 @@ Insert::
     ;SIlVER = 0.0005    = 0.01          * 0.05
     ;JP225  = 0.0001    = 10            * 0.00001
     ;EU50   = 0.000001  = 0.1           * 0.00001
-    ;GER30  = 0.000001  = 0.1           * 0.00001
+    ;GER40  = 0.000001  = 0.1           * 0.00001
     ;UK100  = 0.000001  = 0.1           * 0.00001
     ;US30   = 0.000001  = 0.1           * 0.00001
     ;US500  = 0.000001  = 0.1           * 0.00001
@@ -766,7 +766,7 @@ Insert::
     ;SILVER = 0.01
     ;JP225  = 10
     ;EU50   = 0.1
-    ;GER30  = 0.1
+    ;GER40  = 0.1
     ;UK100  = 0.1
     ;US30   = 0.1
     ;US500  = 0.1
@@ -778,7 +778,7 @@ Insert::
     ;SILVER = 0.05
     ;JP225  = 0.00001
     ;EU50   = 0.00001
-    ;GER30  = 0.00001
+    ;GER40  = 0.00001
     ;UK100  = 0.00001
     ;US30   = 0.00001
     ;US500  = 0.00001
@@ -801,7 +801,7 @@ Insert::
     else if(pair = "NZDJPY" || pair = "AUDJPY" || pair = "EURJPY" || pair = "CHFJPY" || pair = "GBPJPY" || pair = "CADJPY" || pair = "USDJPY") {
         onepip := 0.01
     }
-    else if(pair = "EU50" || pair = "GER30" || pair = "UK100" || pair = "US30" || pair = "US500" || pair = "US100") {
+    else if(pair = "EU50" || pair = "GER40" || pair = "UK100" || pair = "US30" || pair = "US500" || pair = "US100") {
         onepip := 0.000001
     }
     else if(pair = "SILVER") {
@@ -817,7 +817,7 @@ Insert::
     lots        := 0
     slot        := 0
     l := k / pips
-    if(pair = "GOLD" || pair = "SILVER" || pair = "JP225" || pair = "EU50" || pair = "GER30" || pair = "UK100" || pair = "US30" || pair = "US500" || pair = "US100" || pair = "OIL") {
+    if(pair = "GOLD" || pair = "SILVER" || pair = "JP225" || pair = "EU50" || pair = "GER40" || pair = "UK100" || pair = "US30" || pair = "US500" || pair = "US100" || pair = "OIL") {
         if(pair = "JP225") {
             multiple := onepip * u * 0.001
             xy := 

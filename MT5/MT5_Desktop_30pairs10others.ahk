@@ -760,6 +760,7 @@ NumpadDiv::
     ;US500  = 0.000001  = 0.1           * 0.00001
     ;US100  = 0.000001  = 0.1           * 0.00001
     ;OIL    = 0.0001    = 0.1           * 0.001
+    ;OILMn  = 0.00001   = 0.1           * 0.0001
     ;===============================================================
     ;<origin onepip>
     ;GOLD   = 0.1
@@ -772,6 +773,7 @@ NumpadDiv::
     ;US500  = 0.1
     ;US100  = 0.1
     ;OIL    = 0.1
+    ;OILMn  = 0.1
     ;===============================================================
     ;<multiple method>
     ;GOLD   = 0.001
@@ -784,6 +786,7 @@ NumpadDiv::
     ;US500  = 0.00001
     ;US100  = 0.00001
     ;OIL    = 0.001
+    ;OILMn  = 0.0001
     ;===============================================================
     
     ;run
@@ -795,7 +798,10 @@ NumpadDiv::
     FileReadLine, pair, %path%, 1
     MsgBox, %pair%
     onepip := 0
-    if(pair = "NZDCHF" || pair = "NZDCAD" || pair = "NZDUSD" || pair = "AUDNZD" || pair = "AUDCHF" || pair = "AUDCAD" || pair = "AUDUSD" || pair = "EURNZD" || pair = "EURAUD" || pair = "EURCHF" || pair = "EURNOK" || pair = "EURGBP" || pair = "EURCAD" || pair = "EURUSD" || pair = "GBPNZD" || pair = "GBPAUD" || pair = "GBPCHF" || pair = "GBPCAD" || pair = "GBPUSD" || pair = "CADCHF" || pair = "USDCHF" || pair = "USDNOK" || pair = "USDCAD" || pair = "GOLD" || pair = "JP225" || pair = "OIL") {
+    if(pair = "OILMn") {
+        onepip := 0.00001
+    }
+    else if(pair = "NZDCHF" || pair = "NZDCAD" || pair = "NZDUSD" || pair = "AUDNZD" || pair = "AUDCHF" || pair = "AUDCAD" || pair = "AUDUSD" || pair = "EURNZD" || pair = "EURAUD" || pair = "EURCHF" || pair = "EURNOK" || pair = "EURGBP" || pair = "EURCAD" || pair = "EURUSD" || pair = "GBPNZD" || pair = "GBPAUD" || pair = "GBPCHF" || pair = "GBPCAD" || pair = "GBPUSD" || pair = "CADCHF" || pair = "USDCHF" || pair = "USDNOK" || pair = "USDCAD" || pair = "GOLD" || pair = "JP225" || pair = "OIL") {
         onepip := 0.0001
     }
     else if(pair = "NZDJPY" || pair = "AUDJPY" || pair = "EURJPY" || pair = "CHFJPY" || pair = "GBPJPY" || pair = "CADJPY" || pair = "USDJPY") {
@@ -817,7 +823,7 @@ NumpadDiv::
     lots        := 0
     slot        := 0
     l := k / pips
-    if(pair = "GOLD" || pair = "SILVER" || pair = "JP225" || pair = "EU50" || pair = "GER40" || pair = "UK100" || pair = "US30" || pair = "US500" || pair = "US100" || pair = "OIL") {
+    if(pair = "GOLD" || pair = "SILVER" || pair = "JP225" || pair = "EU50" || pair = "GER40" || pair = "UK100" || pair = "US30" || pair = "US500" || pair = "US100" || pair = "OILMn" || pair = "OIL") {
         if(pair = "JP225") {
             multiple := onepip * u * 0.001
             xy := 

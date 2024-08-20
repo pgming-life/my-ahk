@@ -1,5 +1,5 @@
 ﻿;MT5_Desktop_30pairs10others.ahk
-;(c) 2022, pgming
+;(c) 2022-2024, pgming
 ;
 ;when used,
 ;Install>       http://www.autohotkey.com/download/
@@ -633,7 +633,7 @@ D::
     Send o
     Return
 
-;91JP225
+;91JP225Cash
 9 & 1::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
@@ -643,7 +643,7 @@ D::
     Send q
     Return
 
-;92EU50
+;92EU50Cash
 9 & 2::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
@@ -653,7 +653,7 @@ D::
     Send t
     Return
 
-;93GER40
+;93GER40Cash
 9 & 3::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
@@ -663,7 +663,7 @@ D::
     Send u
     Return
 
-;94UK100
+;94UK100Cash
 9 & 4::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
@@ -673,7 +673,7 @@ D::
     Send v
     Return
 
-;95US30(Dow Jones 30-Stock Industrial Average [NY Dow 30])
+;95US30Cash(Dow Jones 30-Stock Industrial Average [NY Dow 30])
 9 & 5::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
@@ -683,7 +683,7 @@ D::
     Send w
     Return
 
-;96US500(Standard & Poor's 500 Stock Index [S&P 500])
+;96US500Cash(Standard & Poor's 500 Stock Index [S&P 500])
 9 & 6::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
@@ -693,7 +693,7 @@ D::
     Send x
     Return
 
-;97US100(NASDAQ-100 [NDX])
+;97US100Cash(NASDAQ-100 [NDX])
 9 & 7::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
@@ -703,7 +703,7 @@ D::
     Send y
     Return
 
-;999OIL
+;999OILCash
 9 & Alt::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
@@ -743,50 +743,47 @@ NumpadDiv::
     ;lots                                           = capital [jpy] / (currency unit * pips * pip value multiple * 0.01)
     ;pip value multiple [basic currency jpy]        = pip value * 0.001
     ;※1 pip value [basic currency jpy]             = (1pip [currency pair pip] / exchange rate [x/y]) * lot size [currency unit] * exchange rate [x/jpy]
-    ;※2 pip value [basic currency jpy] (non pair)  = 1pip [non pair pip] * lot size [currency unit] * exchange rate [x/jpy] (none for JP225)
+    ;※2 pip value [basic currency jpy] (non pair)  = 1pip [non pair pip] * lot size [currency unit] * exchange rate [x/jpy] (none for JP225Cash)
     ;===============================================================
     ;<onepip>
     ;X/JPY PAIR = 0.01
     ;ELSE PAIR  = 0.0001
     
-    ;onepip             = origin onepip * multiple method
-    ;GOLD   = 0.0001    = 0.1           * 0.001
-    ;SIlVER = 0.0005    = 0.01          * 0.05
-    ;JP225  = 0.0001    = 10            * 0.00001
-    ;EU50   = 0.000001  = 0.1           * 0.00001
-    ;GER40  = 0.000001  = 0.1           * 0.00001
-    ;UK100  = 0.000001  = 0.1           * 0.00001
-    ;US30   = 0.000001  = 0.1           * 0.00001
-    ;US500  = 0.000001  = 0.1           * 0.00001
-    ;US100  = 0.000001  = 0.1           * 0.00001
-    ;OIL    = 0.0001    = 0.1           * 0.001
-    ;OILMn  = 0.00001   = 0.1           * 0.0001
+    ;onepip                 = origin onepip * multiple method
+    ;GOLD       = 0.0001    = 0.1           * 0.001
+    ;SIlVER     = 0.0005    = 0.01          * 0.05
+    ;JP225Cash  = 0.0001    = 10            * 0.00001
+    ;EU50Cash   = 0.000001  = 0.1           * 0.00001
+    ;GER40Cash  = 0.000001  = 0.1           * 0.00001
+    ;UK100Cash  = 0.000001  = 0.1           * 0.00001
+    ;US30Cash   = 0.000001  = 0.1           * 0.00001
+    ;US500Cash  = 0.000001  = 0.1           * 0.00001
+    ;US100Cash  = 0.000001  = 0.1           * 0.00001
+    ;OILCash    = 0.0001    = 0.1           * 0.001
     ;===============================================================
     ;<origin onepip>
-    ;GOLD   = 0.1
-    ;SILVER = 0.01
-    ;JP225  = 10
-    ;EU50   = 0.1
-    ;GER40  = 0.1
-    ;UK100  = 0.1
-    ;US30   = 0.1
-    ;US500  = 0.1
-    ;US100  = 0.1
-    ;OIL    = 0.1
-    ;OILMn  = 0.1
+    ;GOLD       = 0.1
+    ;SILVER     = 0.01
+    ;JP225Cash  = 10
+    ;EU50Cash   = 0.1
+    ;GER40Cash  = 0.1
+    ;UK100Cash  = 0.1
+    ;US30Cash   = 0.1
+    ;US500Cash  = 0.1
+    ;US100Cash  = 0.1
+    ;OILCash    = 0.1
     ;===============================================================
     ;<multiple method>
-    ;GOLD   = 0.001
-    ;SILVER = 0.05
-    ;JP225  = 0.00001
-    ;EU50   = 0.00001
-    ;GER40  = 0.00001
-    ;UK100  = 0.00001
-    ;US30   = 0.00001
-    ;US500  = 0.00001
-    ;US100  = 0.00001
-    ;OIL    = 0.001
-    ;OILMn  = 0.0001
+    ;GOLD       = 0.001
+    ;SILVER     = 0.05
+    ;JP225Cash  = 0.00001
+    ;EU50Cash   = 0.00001
+    ;GER40Cash  = 0.00001
+    ;UK100Cash  = 0.00001
+    ;US30Cash   = 0.00001
+    ;US500Cash  = 0.00001
+    ;US100Cash  = 0.00001
+    ;OILCash    = 0.001
     ;===============================================================
     
     ;run
@@ -798,16 +795,13 @@ NumpadDiv::
     FileReadLine, pair, %path%, 1
     MsgBox, %pair%
     onepip := 0
-    if(pair = "OILMn") {
-        onepip := 0.00001
-    }
-    else if(pair = "NZDCHF" || pair = "NZDCAD" || pair = "NZDUSD" || pair = "AUDNZD" || pair = "AUDCHF" || pair = "AUDCAD" || pair = "AUDUSD" || pair = "EURNZD" || pair = "EURAUD" || pair = "EURCHF" || pair = "EURNOK" || pair = "EURGBP" || pair = "EURCAD" || pair = "EURUSD" || pair = "GBPNZD" || pair = "GBPAUD" || pair = "GBPCHF" || pair = "GBPCAD" || pair = "GBPUSD" || pair = "CADCHF" || pair = "USDCHF" || pair = "USDNOK" || pair = "USDCAD" || pair = "GOLD" || pair = "JP225" || pair = "OIL") {
+    if(pair = "NZDCHF" || pair = "NZDCAD" || pair = "NZDUSD" || pair = "AUDNZD" || pair = "AUDCHF" || pair = "AUDCAD" || pair = "AUDUSD" || pair = "EURNZD" || pair = "EURAUD" || pair = "EURCHF" || pair = "EURNOK" || pair = "EURGBP" || pair = "EURCAD" || pair = "EURUSD" || pair = "GBPNZD" || pair = "GBPAUD" || pair = "GBPCHF" || pair = "GBPCAD" || pair = "GBPUSD" || pair = "CADCHF" || pair = "USDCHF" || pair = "USDNOK" || pair = "USDCAD" || pair = "GOLD" || pair = "JP225Cash" || pair = "OILCash") {
         onepip := 0.0001
     }
     else if(pair = "NZDJPY" || pair = "AUDJPY" || pair = "EURJPY" || pair = "CHFJPY" || pair = "GBPJPY" || pair = "CADJPY" || pair = "USDJPY") {
         onepip := 0.01
     }
-    else if(pair = "EU50" || pair = "GER40" || pair = "UK100" || pair = "US30" || pair = "US500" || pair = "US100") {
+    else if(pair = "EU50Cash" || pair = "GER40Cash" || pair = "UK100Cash" || pair = "US30Cash" || pair = "US500Cash" || pair = "US100Cash") {
         onepip := 0.000001
     }
     else if(pair = "SILVER") {
@@ -823,8 +817,8 @@ NumpadDiv::
     lots        := 0
     slot        := 0
     l := k / pips
-    if(pair = "GOLD" || pair = "SILVER" || pair = "JP225" || pair = "EU50" || pair = "GER40" || pair = "UK100" || pair = "US30" || pair = "US500" || pair = "US100" || pair = "OILMn" || pair = "OIL") {
-        if(pair = "JP225") {
+    if(pair = "GOLD" || pair = "SILVER" || pair = "JP225Cash" || pair = "EU50Cash" || pair = "GER40Cash" || pair = "UK100Cash" || pair = "US30Cash" || pair = "US500Cash" || pair = "US100Cash" || pair = "OILCash") {
+        if(pair = "JP225Cash") {
             multiple := onepip * u * 0.001
             xy := 
             xjpy := 
@@ -847,12 +841,12 @@ NumpadDiv::
             }
         }
         else {
-            i := Round(lots) - lots
+            i := Round(lots, 1) - lots
             if(i <= 0) {
-                slot := Round(lots)
+                slot := Round(lots, 1)
             }
             else {
-                slot := Round(lots) - 1
+                slot := Round(lots, 1) - 0.1
             }
         }
     }

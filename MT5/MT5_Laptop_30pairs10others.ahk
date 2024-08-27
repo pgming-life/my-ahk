@@ -831,7 +831,7 @@ Insert::
             xy := 
         }
         lots := l / multiple
-        if(pair = "GOLD" || pair = "SILVER") {
+        if(pair = "GOLD" || pair = "SILVER" || pair = "OILCash") {
             i := Round(lots, 2) - lots
             if(i <= 0) {
                 slot := Round(lots, 2)

@@ -231,7 +231,7 @@ Space::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
     MouseGetPos, xpos, ypos
-    MouseClick, left, 265, %yylen%
+    MouseClick, left, 510, %yylen%
     MouseMove, %xpos%, %ypos%
     Return
 
@@ -240,7 +240,7 @@ L::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
     MouseGetPos, xpos, ypos
-    MouseClick, left, 300, %yylen%
+    MouseClick, left, 545, %yylen%
     MouseMove, %xpos%, %ypos%
     Return
 
@@ -249,7 +249,7 @@ K::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
     MouseGetPos, xpos, ypos
-    MouseClick, left, 335, %yylen%
+    MouseClick, left, 580, %yylen%
     MouseMove, %xpos%, %ypos%
     Return
 
@@ -258,7 +258,7 @@ J::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
     MouseGetPos, xpos, ypos
-    MouseClick, left, 365, %yylen%
+    MouseClick, left, 610, %yylen%
     MouseMove, %xpos%, %ypos%
     Return
 
@@ -267,7 +267,7 @@ P::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
     MouseGetPos, xpos, ypos
-    MouseClick, left, 400, %yylen%
+    MouseClick, left, 645, %yylen%
     MouseMove, %xpos%, %ypos%
     Return
 
@@ -276,7 +276,7 @@ O::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
     MouseGetPos, xpos, ypos
-    MouseClick, left, 430, %yylen%
+    MouseClick, left, 675, %yylen%
     MouseMove, %xpos%, %ypos%
     Return
 
@@ -285,7 +285,7 @@ I::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
     MouseGetPos, xpos, ypos
-    MouseClick, left, 460, %yylen%
+    MouseClick, left, 705, %yylen%
     MouseMove, %xpos%, %ypos%
     Return
 
@@ -294,7 +294,7 @@ U::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
     MouseGetPos, xpos, ypos
-    MouseClick, left, 495, %yylen%
+    MouseClick, left, 740, %yylen%
     MouseMove, %xpos%, %ypos%
     Return
 

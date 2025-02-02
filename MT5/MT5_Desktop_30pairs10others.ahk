@@ -301,8 +301,6 @@ U::
 ; ******************
 ; *    Profile     *
 ; ******************
-;12
-;-------------------------------------------------------------------
 ;Default
 D::
     WinGetPos , , , ,ylen, A
@@ -726,7 +724,7 @@ D::
 ; ******************
 ; *   The Order    *
 ; ******************
-;lots, lot management (run)
+;lots management
 NumpadDiv::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 270

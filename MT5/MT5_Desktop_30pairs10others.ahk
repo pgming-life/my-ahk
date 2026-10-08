@@ -701,8 +701,8 @@ D::
     Send y
     Return
 
-;999OILCash
-9 & Alt::
+;01OILCash
+0 & 1::
     WinGetPos , , , ,ylen, A
     yylen := ylen - 990
     MouseGetPos, xpos, ypos
